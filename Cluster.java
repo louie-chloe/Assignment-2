@@ -3,7 +3,7 @@
  * 
  * KIT107 Assignment 2 -- Cluster Implementation
  * 
- * @author <<your name and student ID number>>
+ * @author <<Duc Thang Luu 737396>>
  * @version	<<date of completion>>
  */
 
