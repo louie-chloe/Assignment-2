@@ -11,7 +11,7 @@
 public class Cluster implements ClusterInterface
 {
     // final instance variables
-COMPLETE ME!
+    protected Node firstPlayer; // first node in the linked list of players
 
     
     // instance variables
@@ -28,7 +28,7 @@ COMPLETE ME!
 	 */
     public Cluster()
     {
-COMPLETE ME!
+        firstPlayer = null;
     }
 
 	/**
@@ -43,7 +43,7 @@ COMPLETE ME!
 	 */
     public boolean isEmpty()
     {
-COMPLETE ME! // to get past the compiler, use: return true;
+       return firstPlayer == null;
     }
 
     /**
@@ -59,7 +59,39 @@ COMPLETE ME! // to get past the compiler, use: return true;
 	 */
     public void addPlayerToCluster(Player p)
     {
-COMPLETE ME!
+        Node newNode; // new node to store the player when an insert is needed
+		Node previous; // node before the current position in the list
+		Node current; // node currently being exanmied in the list
+		Player currentPlayer; // player stored in the current node
+		int comparison; // comparison result between current name and new name`
+		boolean finished; // whether the correct action has been completed
+
+		newNode = new Node(p);
+
+		// if the list is empty, the new player becomes the first node
+		if (isEmpty()){
+			firstPlayer = newNode;
+		}
+		else{
+			previous = null;
+			current = firstPlayer;
+			fisnishes = false;
+
+			// move through the list until the player is updated or inserted
+			while ((current != null) && (!finished)){
+				currentPlayer = (Player) current.getData();
+				comparison = currentPlayer.getName().compareTo(p.getName());
+
+				if (comparison == 0){
+					// same player name: combine the new game's statistics
+					currentPlayer.update(p);
+					finished = true;
+				}
+				else{
+					if (comparison > 0){
+						// current player comes after the new player alphabetically'
+						// so insert the new player before the current node
+						
     }
 
  	/**
