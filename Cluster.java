@@ -177,7 +177,30 @@ public class Cluster implements ClusterInterface
 	 */
     public Player most(char x)
     {
-COMPLETE ME! // to get past the compiler, use: return null;
+       Node current;
+	   Player currentPlayer;
+	   Player bestPlayer;
+	   int currentValue;
+	   int bestValue;
+       bestPlayer = null;
+	   if (!isEmpty()){
+		   current = firstPlayer;
+		   while (current != null){
+			   currentPlayer = (Player) current.getData();
+			   currentValue = getCatergoryValue(currentPlayer, x);
+			   if (bestPlayer == null){
+				   bestlayer = currentPlayer;
+			   }
+			   else{
+				   bestValue = getCategoryValue(bestPlayer, x);
+				   if (currentValue >= bestValue){
+					   bestPlayer = currentPlayer;
+				   }
+			   }
+			   current = current.getNext();
+		   }
+	   }
+	   return bestPlayer;
     }
 
     /**
