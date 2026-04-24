@@ -91,6 +91,28 @@ COMPLETE ME!
 					if (comparison > 0){
 						// current player comes after the new player alphabetically'
 						// so insert the new player before the current node
+						if (previous == null){
+							newNode.setnext(firstPlayer);
+							firstPlayer = newNode;
+						}
+						else{
+							newNode.setNext(current);
+							previous.setNext(newNode);
+						}
+						finished = true;
+					}
+					else{
+						// keep looking further down the list
+						previous = current;
+						current = current.getNext();
+					}
+				}
+			}
+			// if the ned was rreached, the player belongs at the end of the list
+			if(!finished){
+				previous.setNext(newNode);
+			}
+		}
 						
     }
 
