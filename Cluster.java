@@ -10,12 +10,10 @@
 
 public class Cluster implements ClusterInterface
 {
-    // final instance variables
+    // instance variables
     protected Node firstPlayer; // first node in the linked list of players
 
-    
-    // instance variables
-COMPLETE ME!
+
 
 
 	/**
@@ -128,7 +126,12 @@ COMPLETE ME!
 	 */
     public Player getFirstPlayer()
     {
-COMPLETE ME! // to get past the compiler, use: return null;
+       Player answer; // first player in the cluster
+		answer = null;
+		if (!isEmpty()){
+			answer = (Player) firstPlayer.getData();
+		}
+		return answer;
     }
 
    /**
@@ -141,10 +144,19 @@ COMPLETE ME! // to get past the compiler, use: return null;
      *                  returned.
 	 * Informally: Produce a count of players within the current Cluster.
 	 */
-    public int countPlayers()
-    {
-COMPLETE ME! // to get past the compiler, use: return 0;
-    }
+    public int countPlayers(){
+      Node current; // current node visit in the list
+	  int count; // number of players in the cluster
+      count = 0;
+	  current = fisrtPlayer;
+
+		// count node in the linked list
+		while (current != null){
+			count++;
+			current = current.getNext();
+		}
+		return count;
+	}
 
     /**
 	 * most()
