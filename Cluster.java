@@ -177,23 +177,28 @@ public class Cluster implements ClusterInterface
 	 */
     public Player most(char x)
     {
-       Node current;
-	   Player currentPlayer;
-	   Player bestPlayer;
-	   int currentValue;
-	   int bestValue;
+       Node current;// current node being visited in the list
+	   Player currentPlayer;// player stored in the current node
+	   Player bestPlayer;//player with the highest value
+	   int currentValue;//category value for current player
+	   int bestValue;//best category
+		
        bestPlayer = null;
+		
 	   if (!isEmpty()){
 		   current = firstPlayer;
+		   
 		   while (current != null){
 			   currentPlayer = (Player) current.getData();
 			   currentValue = getCatergoryValue(currentPlayer, x);
+			   
 			   if (bestPlayer == null){
 				   bestlayer = currentPlayer;
 			   }
 			   else{
 				   bestValue = getCategoryValue(bestPlayer, x);
 				   if (currentValue >= bestValue){
+					   
 					   bestPlayer = currentPlayer;
 				   }
 			   }
