@@ -237,6 +237,20 @@ COMPLETE ME! // to get past the compiler, use: return "";
 	 */
     public String toString()
     {
-COMPLETE ME! // to get past the compiler, use: return "";
+        Node current;     // current node being visited in the list
+        String result;    // final printable form of the cluster
+
+        result = "";
+        current = firstPlayer;
+
+        // add each player's printable form to the result string
+        while (current != null)
+        {
+            result = result + current.getData().toString();
+            current = current.getNext();
+        }
+
+        return result;
+    }
     }
 }
