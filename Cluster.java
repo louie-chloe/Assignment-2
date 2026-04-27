@@ -252,5 +252,38 @@ COMPLETE ME! // to get past the compiler, use: return "";
 
         return result;
     }
-    }
+
+
+
+
+    protected int getCaregoryValue(Player p, char x){
+		int value;
+		value = 0
+		if (x =='g'){
+			value = p.getGoals();
+		}
+		else{
+			if (x == 'd'){
+				value = p.get.Disposal();
+			}
+			else{
+				if (x == 'm'){
+					value = p.getGames();
+				}
+				else{
+					if (x == 'c'){
+						value = p.getClangers();
+					}
+					else{
+						if (x == 'a'){
+							value = p.getFreesAgainst();
+						}
+					}
+				}
+			}
+		}
+
+		return value;
+	}
 }
+
