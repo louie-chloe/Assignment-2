@@ -253,11 +253,16 @@ COMPLETE ME! // to get past the compiler, use: return "";
         return result;
     }
 
-
+    /**
+	 * getCategoryValue()
+	 *p player -- player whose statistics is neeeded
+	 *x char -- category code
+	 *@return int -- the value of that category for the player
+	 */
 
 
     protected int getCaregoryValue(Player p, char x){
-		int value;
+		int value; // statistic value choose from player object
 		value = 0
 		if (x =='g'){
 			value = p.getGoals();
