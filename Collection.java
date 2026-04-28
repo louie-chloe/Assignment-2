@@ -11,11 +11,15 @@
 public class Collection implements CollectionInterface
 {
     // final instance variables
-COMPLETE ME!
+    protected final int MAX_TEAMS = 18;    // maximum number of AFL teams in the collection
+    protected final int TEAM_WIDTH = 22;   // width used to line up histogram team names
+
 
     
     // instance variables
-COMPLETE ME!
+    protected Cluster []teams;    // array holding the team clusters
+    protected int countTeams;     // number of team clusters currently stored
+
 
     
 	/**
@@ -28,7 +32,8 @@ COMPLETE ME!
 	 */
     public Collection()
     {
-COMPLETE ME!
+        teams = new Cluster[MAX_TEAMS];
+        countTeams = 0;
     }
 
 	/**
@@ -43,7 +48,7 @@ COMPLETE ME!
 	 */
     public boolean isEmpty()
     {
-COMPLETE ME! // to get past the compiler, use: return true;
+       return countTeams == 0; // to get past the compiler, use: return true;
     }
 
     /**
@@ -60,7 +65,18 @@ COMPLETE ME! // to get past the compiler, use: return true;
 	 */
     public void addPlayerToCollection(Player p)
     {
-COMPLETE ME!
+        int position;          // index where team is found or should be inserted
+        String currentTeam;    // team name already stored at the current position
+        Cluster newCluster;    // new cluster created for a team not yet in the collection
+        int i;                 // loop counter used when shifting array elements
+        position = 0;
+
+        // find the first position where the existing team is not before p's team
+        while ((position < countTeams)
+                && (getTeamName(teams[position]).compareTo(p.getTeam()) < 0))
+        {
+            position++;
+        }
     }
 
     /**
