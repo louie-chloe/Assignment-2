@@ -77,6 +77,26 @@ public class Collection implements CollectionInterface
         {
             position++;
         }
+		// if the team already exists, add the player to that cluster
+        if ((position < countTeams)
+                && (getTeamName(teams[position]).equals(p.getTeam())))
+        {
+            teams[position].addPlayerToCluster(p);
+        }
+        else
+        {
+            // shift teams right to make room for the new team cluster
+            for (i = countTeams; i > position; i--)
+            {
+                teams[i] = teams[i - 1];
+            }
+
+            // create the new cluster, add the player, and store the cluster
+            newCluster = new Cluster();
+            newCluster.addPlayerToCluster(p);
+            teams[position] = newCluster;
+            countTeams++;
+        }
     }
 
     /**
