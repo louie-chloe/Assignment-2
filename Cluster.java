@@ -220,7 +220,22 @@ public class Cluster implements ClusterInterface
 	 */
     public String summary()
     {
-COMPLETE ME! // to get past the compiler, use: return "";
+        Node current;         // current node being visited in the list
+        Player currentPlayer; // player stored in the current node
+        int disposals;        // combined disposals for the whole team
+        int marks;            // combined marks for the whole team
+        int kicks;            // combined kicks for the whole team
+        int handballs;        // combined handballs for the whole team
+        int hitouts;          // combined hitouts for the whole team
+        int tackles;          // combined tackles for the whole team
+        int clangers;         // combined clangers for the whole team
+        int freesFor;         // combined free kicks received by the whole team
+        int freesAgainst;     // combined free kicks given away by the whole team
+        int goals;            // combined goals for the whole team
+        int behinds;          // combined behinds for the whole team
+        String result;        // final summary string
+
+        result = "";// to get past the compiler, use: return "";
     }
 
 	/**
