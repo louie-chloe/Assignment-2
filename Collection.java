@@ -120,6 +120,17 @@ public class Collection implements CollectionInterface
         String stars;       // row of stars for the current team
 
         System.out.println("Count of players per team:");
+		if (isEmpty())
+        {
+            System.out.println("No data!");
+        }
+        else
+        {
+            for (i = 0; i < countTeams; i++)
+            {
+                teamName = getTeamName(teams[i]);
+                playerCount = teams[i].countPlayers();
+                stars = "";
     }
 
     /**
