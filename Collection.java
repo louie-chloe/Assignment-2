@@ -131,7 +131,16 @@ public class Collection implements CollectionInterface
                 teamName = getTeamName(teams[i]);
                 playerCount = teams[i].countPlayers();
                 stars = "";
-    }
+
+				for (j=0, j < playerCount, j++){
+					stars = stars + "*"
+						}
+
+				System.out.println(String.format("%" + TEAM_WIDTH + "s | %s %d",teamName, stars, playerCount));
+			}
+		}
+	}
+
 
     /**
 	 * most()
