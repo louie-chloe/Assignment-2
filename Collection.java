@@ -113,7 +113,13 @@ public class Collection implements CollectionInterface
 	 */
     public void showPlayerHistogram()
     {
-COMPLETE ME!
+        int i;              // loop counter for traversing the teams array
+        String teamName;    // team name for the current histogram row
+        int playerCount;    // number of players in the current team
+        int j;              // loop counter for printing the stars
+        String stars;       // row of stars for the current team
+
+        System.out.println("Count of players per team:");
     }
 
     /**
