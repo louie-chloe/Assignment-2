@@ -236,6 +236,15 @@ public class Cluster implements ClusterInterface
         String result;        // final summary string
 
         result = "";// to get past the compiler, use: return "";
+
+		if (!isEmpty())
+        {
+            disposals = 0;
+            marks = 0;
+            kicks = 0;
+            handballs = 0;
+            hitouts = 0;
+            tackles = 0;
     }
 
 	/**
