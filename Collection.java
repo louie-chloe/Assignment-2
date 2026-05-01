@@ -169,6 +169,13 @@ public class Collection implements CollectionInterface
         String result;        // final result returned to the caller
 
         result = "No data!";
+
+		if (!isEmpty())
+        {
+            overallBest = null;
+
+           
+            for (i = 0; i < countTeams; i++)
  // to get past the compiler, use: return "";
     }
 
