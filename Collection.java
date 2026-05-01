@@ -161,7 +161,15 @@ public class Collection implements CollectionInterface
      */
     public String most(char x)
     {
-COMPLETE ME! // to get past the compiler, use: return "";
+        int i;                // loop counter for traversing the teams array
+        Player teamBest;      // best player found in the current team
+        Player overallBest;   // best player found in the whole collection
+        int teamValue;        // requested value for the current team's best player
+        int bestValue;        // requested value for the overall best player
+        String result;        // final result returned to the caller
+
+        result = "No data!";
+ // to get past the compiler, use: return "";
     }
 
     /**
