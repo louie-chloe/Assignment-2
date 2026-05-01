@@ -251,6 +251,13 @@ public class Cluster implements ClusterInterface
             goals = 0;
             behinds = 0;
             current = firstPlayer;
+
+			while (current != null)
+            {
+                currentPlayer = (Player) current.getData();
+                disposals = disposals + currentPlayer.getDisposals();
+                marks = marks + currentPlayer.getMarks();
+                kicks = kicks + currentPlayer.getKicks();
     }
 
 	/**
