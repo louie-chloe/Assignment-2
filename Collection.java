@@ -195,7 +195,13 @@ public class Collection implements CollectionInterface
                     }
                 }
             }
-
+            if (overallBest != null){
+				result = overallBest.tótring();
+			}
+		}
+		return result
+	}
+	
  // to get past the compiler, use: return "";
     }
 
