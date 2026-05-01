@@ -245,6 +245,12 @@ public class Cluster implements ClusterInterface
             handballs = 0;
             hitouts = 0;
             tackles = 0;
+			clangers = 0;
+            freesFor = 0;
+            freesAgainst = 0;
+            goals = 0;
+            behinds = 0;
+            current = firstPlayer;
     }
 
 	/**
