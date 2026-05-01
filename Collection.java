@@ -174,8 +174,28 @@ public class Collection implements CollectionInterface
         {
             overallBest = null;
 
-           
+                // ask each team for its best player in the requested category
             for (i = 0; i < countTeams; i++)
+				{
+                teamBest = teams[i].most(x);
+                if (teamBest != null)
+                {
+                    if (overallBest == null)
+                    {
+                        overallBest = teamBest;
+                    }
+                    else
+                    {
+                        teamValue = getCategoryValue(teamBest, x);
+                        bestValue = getCategoryValue(overallBest, x);
+                        if (teamValue >= bestValue)
+                        {
+                            overallBest = teamBest;
+                        }
+                    }
+                }
+            }
+
  // to get past the compiler, use: return "";
     }
 
