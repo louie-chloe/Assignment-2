@@ -267,6 +267,17 @@ public class Cluster implements ClusterInterface
                 goals = goals + currentPlayer.getGoals();
                 behinds = behinds + currentPlayer.getBehinds();
                 current = current.getNext();
+			}
+			result = "\tThere were: " + disposals + " disposals (Marks: " + marks
+                + "; kicks: " + kicks + "; handballs: " + handballs
+                + "; hitouts: " + hitouts + ")\n"
+                + "\tTackles: " + tackles + " Clangers: " + clangers + "\n"
+                + "\tFree kicks: " + freesFor + " for and " + freesAgainst
+                + " against\n"
+                + "\tScoring: " + goals + "." + behinds + " for a total of "
+                + (goals * 6 + behinds) + " points.";
+
+				
     }
 
 	/**
