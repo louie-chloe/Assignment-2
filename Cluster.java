@@ -277,6 +277,8 @@ public class Cluster implements ClusterInterface
                 + " against\n"
                 + "\tScoring: " + goals + "." + behinds + " for a total of "
                 + (goals * 6 + behinds) + " points.";
+		}
+		return result;
 
 				
     }
