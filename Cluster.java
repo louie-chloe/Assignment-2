@@ -258,6 +258,15 @@ public class Cluster implements ClusterInterface
                 disposals = disposals + currentPlayer.getDisposals();
                 marks = marks + currentPlayer.getMarks();
                 kicks = kicks + currentPlayer.getKicks();
+				handballs = handballs + currentPlayer.getHandballs();
+                hitouts = hitouts + currentPlayer.getHitouts();
+                tackles = tackles + currentPlayer.getTackles();
+                clangers = clangers + currentPlayer.getClangers();
+                freesFor = freesFor + currentPlayer.getFreesFor();
+                freesAgainst = freesAgainst + currentPlayer.getFreesAgainst();
+                goals = goals + currentPlayer.getGoals();
+                behinds = behinds + currentPlayer.getBehinds();
+                current = current.getNext();
     }
 
 	/**
