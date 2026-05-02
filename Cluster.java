@@ -268,6 +268,7 @@ public class Cluster implements ClusterInterface
                 behinds = behinds + currentPlayer.getBehinds();
                 current = current.getNext();
 			}
+			// build the final multi-line summary string
 			result = "\tThere were: " + disposals + " disposals (Marks: " + marks
                 + "; kicks: " + kicks + "; handballs: " + handballs
                 + "; hitouts: " + hitouts + ")\n"
