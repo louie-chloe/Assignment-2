@@ -264,6 +264,17 @@ public class Collection implements CollectionInterface
         return result;
     }
 
+
+	/**
+     * getTeamName()
+     * 
+     * @param c Cluster -- team cluster whose name is needed
+     * @return String -- the name of the team stored in the cluster
+     * 
+     * Precondition: The cluster is non-empty.
+     * Postcondition: The team name from the first player in the cluster is returned.
+     * Informally: Get the name used to identify a cluster in the collection.
+     */
 	protected String getTeamName(Cluster c)
     {
         return c.getFirstPlayer().getTeam();
