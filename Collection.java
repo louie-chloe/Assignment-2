@@ -263,4 +263,9 @@ public class Collection implements CollectionInterface
 
         return result;
     }
+
+	protected String getTeamName(Cluster c)
+    {
+        return c.getFirstPlayer().getTeam();
+    }
 }
