@@ -261,6 +261,6 @@ public class Collection implements CollectionInterface
             result = result + teams[i].toString();
         }
 
-        return result;! // to get past the compiler, use: return "";
+        return result;
     }
 }
