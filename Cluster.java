@@ -318,6 +318,9 @@ public class Cluster implements ClusterInterface
 	 *p player -- player whose statistics is neeeded
 	 *x char -- category code
 	 *@return int -- the value of that category for the player
+	 *Precondition: the player has been constructed
+	 *Postcondition: The requested statistics has been returned
+	 *Informally: Convert the category code into the matching player fiels.
 	 */
 
 
