@@ -250,6 +250,17 @@ public class Collection implements CollectionInterface
 	 */
     public String toString()
     {
-COMPLETE ME! // to get past the compiler, use: return "";
+        int i;// loop counter for traversing the teams array
+        String result;// final printable form of the collection
+
+        result = "";
+
+        // join together the printable form of every cluster in order
+        for (i = 0; i < countTeams; i++)
+        {
+            result = result + teams[i].toString();
+        }
+
+        return result;! // to get past the compiler, use: return "";
     }
 }
