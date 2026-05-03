@@ -313,15 +313,17 @@ public class Cluster implements ClusterInterface
         return result;
     }
 
-    /**
-	 * getCategoryValue()
-	 *p player -- player whose statistics is neeeded
-	 *x char -- category code
-	 *@return int -- the value of that category for the player
-	 *Precondition: the player has been constructed
-	 *Postcondition: The requested statistics has been returned
-	 *Informally: Convert the category code into the matching player fiels.
-	 */
+     /**
+     * getCategoryValue()
+     * 
+     * @param p Player -- player whose statistic is needed
+     * @param x char -- category code
+     * @return int -- the value of that category for the player
+     * 
+     * Precondition: The player has been constructed.
+     * Postcondition: The requested statistic has been returned.
+     * Informally: Convert the category code into the matching player field.
+     */
 
 
     protected int getCaregoryValue(Player p, char x){
