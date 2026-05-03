@@ -279,4 +279,11 @@ public class Collection implements CollectionInterface
     {
         return c.getFirstPlayer().getTeam();
     }
+
+
+
+   protected int getCategoryValue(Player p, char x)
+   {
+	   int value; // statistic value chosen from the player object
+	   value = 0;
 }
