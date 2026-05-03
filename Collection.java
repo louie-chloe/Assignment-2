@@ -223,7 +223,17 @@ public class Collection implements CollectionInterface
 	 */
     public void summarise(String t)
     {
-COMPLETE ME! 
+        int i;              // loop counter for traversing the teams array
+        boolean found;      // whether the requested team has been found
+
+        if (isEmpty())
+        {
+            System.out.println("No data!");
+        }
+        else
+        {
+            i = 0;
+            found = false;
     }
 
 	/**
