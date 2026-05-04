@@ -67,16 +67,19 @@ public class Cluster implements ClusterInterface
 		newNode = new Node(p);
 
 		// if the list is empty, the new player becomes the first node
-		if (isEmpty()){
+		if (isEmpty())
+		{
 			firstPlayer = newNode;
 		}
-		else{
+		else
+		{
 			previous = null;
 			current = firstPlayer;
 			fisnishes = false;
 
 			// move through the list until the player is updated or inserted
-			while ((current != null) && (!finished)){
+			while ((current != null) && (!finished))
+			{
 				currentPlayer = (Player) current.getData();
 				comparison = currentPlayer.getName().compareTo(p.getName());
 
@@ -85,21 +88,25 @@ public class Cluster implements ClusterInterface
 					currentPlayer.update(p);
 					finished = true;
 				}
-				else{
+				else
+				{
 					if (comparison > 0){
 						// current player comes after the new player alphabetically'
 						// so insert the new player before the current node
-						if (previous == null){
+						if (previous == null)
+						{
 							newNode.setnext(firstPlayer);
 							firstPlayer = newNode;
 						}
-						else{
+						else
+						{
 							newNode.setNext(current);
 							previous.setNext(newNode);
 						}
 						finished = true;
 					}
-					else{
+					else
+					{
 						// keep looking further down the list
 						previous = current;
 						current = current.getNext();
@@ -107,7 +114,8 @@ public class Cluster implements ClusterInterface
 				}
 			}
 			// if the ned was rreached, the player belongs at the end of the list
-			if(!finished){
+			if(!finished)
+			{
 				previous.setNext(newNode);
 			}
 		}
@@ -128,7 +136,8 @@ public class Cluster implements ClusterInterface
     {
        Player answer; // first player in the cluster
 		answer = null;
-		if (!isEmpty()){
+		if (!isEmpty())
+		{
 			answer = (Player) firstPlayer.getData();
 		}
 		return answer;
@@ -144,14 +153,16 @@ public class Cluster implements ClusterInterface
      *                  returned.
 	 * Informally: Produce a count of players within the current Cluster.
 	 */
-    public int countPlayers(){
+    public int countPlayers()
+	{
       Node current; // current node visit in the list
 	  int count; // number of players in the cluster
       count = 0;
 	  current = fisrtPlayer;
 
 		// count node in the linked list
-		while (current != null){
+		while (current != null)
+		{
 			count++;
 			current = current.getNext();
 		}
@@ -185,19 +196,24 @@ public class Cluster implements ClusterInterface
 		
        bestPlayer = null;
 		
-	   if (!isEmpty()){
+	   if (!isEmpty())
+	   {
 		   current = firstPlayer;
 		   
-		   while (current != null){
+		   while (current != null)
+		   {
 			   currentPlayer = (Player) current.getData();
 			   currentValue = getCatergoryValue(currentPlayer, x);
 			   
-			   if (bestPlayer == null){
+			   if (bestPlayer == null)
+			   {
 				   bestlayer = currentPlayer;
 			   }
-			   else{
+			   else
+			   {
 				   bestValue = getCategoryValue(bestPlayer, x);
-				   if (currentValue >= bestValue){
+				   if (currentValue >= bestValue)
+				   {
 					   
 					   bestPlayer = currentPlayer;
 				   }
@@ -329,18 +345,22 @@ public class Cluster implements ClusterInterface
     protected int getCaregoryValue(Player p, char x){
 		int value; // statistic value choose from player object
 		value = 0
-		if (x =='g'){
+		if (x =='g')
+		{
 			value = p.getGoals();
 		}
-		else{
+		else
+		{
 			if (x == 'd'){
 				value = p.get.Disposal();
 			}
-			else{
+			else
+			{
 				if (x == 'm'){
 					value = p.getGames();
 				}
-				else{
+				else
+				{
 					if (x == 'c'){
 						value = p.getClangers();
 					}
