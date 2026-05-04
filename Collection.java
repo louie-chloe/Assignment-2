@@ -286,4 +286,41 @@ public class Collection implements CollectionInterface
    {
 	   int value; // statistic value chosen from the player object
 	   value = 0;
+	   if (x == 'g')
+        {
+            value = p.getGoals();
+        }
+        else
+        {
+            if (x == 'd')
+            {
+                value = p.getDisposals();
+            }
+            else
+            {
+                if (x == 'm')
+                {
+                    value = p.getGames();
+                }
+                else
+                {
+                    if (x == 'c')
+                    {
+                        value = p.getClangers();
+                    }
+                    else
+                    {
+                        if (x == 'a')
+                        {
+                            value = p.getFreesAgainst();
+                        }
+                    }
+                }
+            }
+        }
+
+        return value;
+    }
+}
+
 }
