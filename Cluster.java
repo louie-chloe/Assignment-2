@@ -64,6 +64,7 @@ public class Cluster implements ClusterInterface
 		int comparison; // comparison result between current name and new name`
 		boolean finished; // whether the correct action has been completed
 
+		// Create a new node for the player in case the player needs to be inserted.
 		newNode = new Node(p);
 
 		// if the list is empty, the new player becomes the first node
@@ -77,22 +78,25 @@ public class Cluster implements ClusterInterface
 			current = firstPlayer;
 			fisnishes = false;
 
-			// move through the list until the player is updated or inserted
+			// Walk through the linked list until the correct position is found.
 			while ((current != null) && (!finished))
 			{
 				currentPlayer = (Player) current.getData();
 				comparison = currentPlayer.getName().compareTo(p.getName());
 
+			
+            // If the player already exists, combine the new statistics with the old ones
 				if (comparison == 0){
-					// same player name: combine the new game's statistics
+		
 					currentPlayer.update(p);
 					finished = true;
 				}
 				else
 				{
+					// If the current player's name comes after the new player's name,
+                     // insert the new player before the current node.
 					if (comparison > 0){
-						// current player comes after the new player alphabetically'
-						// so insert the new player before the current node
+						
 						if (previous == null)
 						{
 							newNode.setnext(firstPlayer);
@@ -107,13 +111,13 @@ public class Cluster implements ClusterInterface
 					}
 					else
 					{
-						// keep looking further down the list
+                        // Keep moving forward until the right position is found.
 						previous = current;
 						current = current.getNext();
 					}
 				}
 			}
-			// if the ned was rreached, the player belongs at the end of the list
+			// If the end of the list was reached, add the new player after the last node.v
 			if(!finished)
 			{
 				previous.setNext(newNode);
@@ -160,7 +164,7 @@ public class Cluster implements ClusterInterface
       count = 0;
 	  current = fisrtPlayer;
 
-		// count node in the linked list
+		// Traverse the linked list and count one player for each node.
 		while (current != null)
 		{
 			count++;
