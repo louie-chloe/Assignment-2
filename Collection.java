@@ -280,7 +280,17 @@ public class Collection implements CollectionInterface
         return c.getFirstPlayer().getTeam();
     }
 
-
+   /**
+     * getCategoryValue()
+     * 
+     * @param p Player -- player whose statistic is needed
+     * @param x char -- category code
+     * @return int -- the value of that category for the player
+     * 
+     * Precondition: The player has been constructed.
+     * Postcondition: The requested statistic has been returned.
+     * Informally: Convert the category code into the matching player field.
+     */
 
    protected int getCategoryValue(Player p, char x)
    {
